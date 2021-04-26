@@ -20,8 +20,6 @@ for link in soup.find_all('a'):
         soup = BeautifulSoup(html_text, 'html.parser')
         rating=re.findall("Current Rating:\S+ (\d+)",str(soup))
         person=re.findall("\"([^\"]+)\" property\=\"og:title\"",str(soup))
-        #print(rating)
-        #print(person)
         if len(rating)>0 and len(person)>0:
             row=[int(rating[0]),person[0]]
             matrix.append(row)
