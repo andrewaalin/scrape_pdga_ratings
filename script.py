@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import re
 import time
 
-vgm_url = "https://www.discgolfscene.com/tournaments/2021_NOVA_Disc_Golf_Association_Membership_Drive_2021/registration?fbclid=IwAR37WqLoR5Al5Ac6bwOK9EGBnRgZ6OivctB9Fkiac0hSlVb2aWXjoRhh71A"
+vgm_url = "https://www.discgolfscene.com/tournaments/2021_NOVA_Disc_Golf_Association_Membership_Drive_2021/registration"
 
 html_text = requests.get(vgm_url).text
 soup = BeautifulSoup(html_text, 'html.parser')
